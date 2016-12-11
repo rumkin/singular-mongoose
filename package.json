@@ -1,0 +1,48 @@
+{
+  "main": "build/index.js",
+  "scripts": {
+    "build": "[ -d build ] && rm -rf build; cp -r src build",
+    "start": "npm run build && node .",
+    "cov": "npm run build && istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**.spec.js",
+    "test": "npm run build && mocha test/**.spec.js",
+    "prepublish": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.7.2",
+    "should": "^11.1.2",
+    "singular": "^2.4.0"
+  },
+  "name": "singular-mongoose",
+  "description": "Mongoose module for singular application.",
+  "version": "1.0.0",
+  "bin": {
+    "singular-mongoose": "cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mongoose": "^4.7.2",
+    "istanbul": "^0.4.5",
+    "should": "^11.1.2",
+    "singular": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/singular-mongoose.git"
+  },
+  "keywords": [
+    "singular",
+    "singular:module",
+    "mongoose",
+    "db"
+  ],
+  "author": "dev@rumk.in",
+  "bugs": {
+    "url": "https://github.com/rumkin/singular-mongoose/issues"
+  },
+  "homepage": "https://github.com/rumkin/singular-mongoose#readme"
+}
