@@ -1,6 +1,9 @@
-const mongoose = require('mongoose');
+'use strict';
 
-mongoose.Promise = Promise;
+const mongoose = require('mongoose');
+const bluebird = require('bluebird');
+
+mongoose.Promise = bluebird;
 
 function mongooseFactory(appConfig) {
     let config = Object.assign({}, appConfig, {
