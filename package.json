@@ -16,10 +16,7 @@
   },
   "name": "singular-mongoose",
   "description": "Mongoose module for singular application.",
-  "version": "1.1.2",
-  "bin": {
-    "singular-mongoose": "cli.js"
-  },
+  "version": "1.2.2",
   "directories": {
     "test": "test"
   },
